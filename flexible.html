@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            margin: 0;
+
+        }
+        body > div{
+            display: flex;
+            flex-flow: row wrap;
+            min-width: 800px;
+        }
+        body > div:nth-child(1) > header, nav, main, aside, footer{
+            background: #ccc;
+            border-radius: 7px;
+            margin: 5px;
+            padding: 20px;
+        }
+        body > div:nth-child(1)  > header {
+            order: 1;
+            height: 100px;
+            flex: 0 1 100%;
+        }
+        body > div:nth-child(1)  > nav{
+            order: 2;
+            flex:  0 1 200px;
+            align-items: stretch;
+        }
+        body > div:nth-child(1)  > main{
+            order: 3;
+            min-height: 300px;
+            flex: 1;
+        }
+        body > div:nth-child(1)  > aside{
+            order: 4;
+            flex:  0 1 200px;
+        }
+        body > div:nth-child(1)  > footer{
+            order: 5;
+            height: 100px;
+            flex:  0 1 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>Header</header>
+        <nav>Navigation</nav>
+        <main>Main content</main>
+        <aside>Aside content</aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
